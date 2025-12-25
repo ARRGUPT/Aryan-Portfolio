@@ -1,0 +1,331 @@
+.about {
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.section-tag {
+  display: inline-block;
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  margin-top: 48px;
+}
+
+.about-content {
+  padding-right: 20px;
+}
+
+.about-text {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.about-text .highlight {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.highlight-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--bg-tertiary);
+  transition: all var(--transition-normal);
+}
+
+.highlight-card:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.highlight-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--primary-color);
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+.highlight-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.highlight-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.highlight-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.about-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* About Visual */
+.about-visual {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.visual-card {
+  position: relative;
+  max-width: 100%;
+}
+
+.code-window {
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  border: 1px solid var(--bg-tertiary);
+  box-shadow: var(--shadow-xl);
+  max-width: 100%;
+}
+
+.window-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid var(--bg-tertiary);
+}
+
+.window-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27ca40; }
+
+.window-title {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-family: 'Fira Code', monospace;
+}
+
+.code-content {
+  padding: 20px;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.code-content pre {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  white-space: pre;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: var(--gradient-primary);
+  padding: 20px 28px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: var(--shadow-xl);
+}
+
+.exp-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+}
+
+.exp-text {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .about-content {
+    padding-right: 0;
+    order: 1;
+  }
+
+  .about-visual {
+    order: 0;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .about-highlights {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-highlights {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .highlight-card {
+    padding: 16px;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+  }
+
+  .about-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .about-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .about-visual {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .code-window {
+    max-width: 100%;
+  }
+
+  .code-content {
+    padding: 12px;
+    overflow-x: auto;
+  }
+
+  .experience-badge {
+    bottom: -8px;
+    right: -3px;
+    padding: 8px 12px;
+  }
+
+  .exp-number {
+    font-size: 1.1rem;
+  }
+
+  .exp-text {
+    font-size: 0.65rem;
+  }
+
+  .code-content pre {
+    font-size: 0.7rem;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-highlights {
+    gap: 10px;
+  }
+
+  .highlight-card {
+    padding: 14px;
+  }
+
+  .highlight-icon {
+    font-size: 1.3rem;
+  }
+
+  .highlight-label {
+    font-size: 0.7rem;
+  }
+
+  .highlight-value {
+    font-size: 0.9rem;
+  }
+
+  .about-text {
+    font-size: 0.9rem;
+  }
+
+  .experience-badge {
+    bottom: -5px;
+    right: 0;
+    padding: 6px 10px;
+  }
+
+  .exp-number {
+    font-size: 1rem;
+  }
+
+  .exp-text {
+    font-size: 0.6rem;
+  }
+
+  .code-content {
+    padding: 10px;
+  }
+
+  .code-content pre {
+    font-size: 0.55rem;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+
+  .about-text {
+    word-break: break-word;
+  }
+
+  .highlight-value {
+    font-size: 0.85rem;
+    word-break: break-word;
+  }
+}
