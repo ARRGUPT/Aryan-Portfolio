@@ -110,7 +110,7 @@ const Hero = () => {
           <div className="profile-card">
             <div className="profile-image-container">
               <div className="profile-image">
-                <span className="profile-initials">AG</span>
+                <img src="/aryan-photo.jpeg" alt="Aryan Gupta" />
               </div>
               <div className="profile-ring"></div>
               <div className="profile-ring ring-2"></div>
