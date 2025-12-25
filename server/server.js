@@ -16,17 +16,20 @@ app.use(express.json());
 // MongoDB Connection with extended timeout and retry logic
 const connectDB = async () => {
   try {
+    console.log('🔄 Attempting to connect to MongoDB...');
     await mongoose.connect(process.env.MONGODB_URI, {
-      serverSelectionTimeoutMS: 30000, // Increase timeout to 30 seconds
-      socketTimeoutMS: 45000, // Socket timeout
-      connectTimeoutMS: 30000, // Connection timeout
+      serverSelectionTimeoutMS: 60000, // Increase timeout to 60 seconds
+      socketTimeoutMS: 75000, // Socket timeout
+      connectTimeoutMS: 60000, // Connection timeout
+      family: 4, // Use IPv4, skip trying IPv6
     });
     console.log('✅ MongoDB Connected Successfully');
   } catch (err) {
     console.error('❌ MongoDB connection error:', err.message);
-    // Retry connection after 5 seconds
-    console.log('🔄 Retrying MongoDB connection in 5 seconds...');
-    setTimeout(connectDB, 5000);
+    console.error('Full error:', err);
+    // Retry connection after 10 seconds
+    console.log('🔄 Retrying MongoDB connection in 10 seconds...');
+    setTimeout(connectDB, 10000);
   }
 };
 
