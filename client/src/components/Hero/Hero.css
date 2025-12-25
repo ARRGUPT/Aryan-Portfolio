@@ -222,10 +222,10 @@
   font-size: 1.1rem;
 }
 
-.badge-1 { top: 10%; left: -10%; animation-delay: 0s; }
-.badge-2 { top: 10%; right: -10%; animation-delay: 0.5s; }
-.badge-3 { bottom: 15%; left: -10%; animation-delay: 1s; }
-.badge-4 { bottom: 10%; right: -5%; animation-delay: 1.5s; }
+.badge-1 { top: 15%; left: -5%; animation-delay: 0s; }
+.badge-2 { top: 15%; right: -5%; animation-delay: 0.5s; }
+.badge-3 { bottom: 15%; left: -5%; animation-delay: 1s; }
+.badge-4 { bottom: 15%; right: -5%; animation-delay: 1.5s; }
 
 /* Hero Stats */
 .hero-stats {
@@ -391,10 +391,10 @@
     font-size: 0.75rem;
   }
 
-  .badge-1 { top: 5%; left: 0; }
-  .badge-2 { top: 5%; right: 0; }
-  .badge-3 { bottom: 15%; left: 5%; }
-  .badge-4 { bottom: 5%; right: 5%; }
+  .badge-1 { top: 12%; left: 2%; }
+  .badge-2 { top: 12%; right: 2%; }
+  .badge-3 { bottom: 12%; left: 2%; }
+  .badge-4 { bottom: 12%; right: 2%; }
 }
 
 @media (max-width: 768px) {
@@ -502,10 +502,10 @@
     font-size: 0.9rem;
   }
 
-  .badge-1 { top: 8%; left: 2%; }
-  .badge-2 { top: 8%; right: 2%; }
-  .badge-3 { top: -8%; left: 50%; transform: translateX(-50%); }
-  .badge-4 { bottom: 8%; right: 2%; }
+  .badge-1 { top: 10%; left: 3%; }
+  .badge-2 { top: 10%; right: 3%; }
+  .badge-3 { bottom: 10%; left: 3%; }
+  .badge-4 { bottom: 10%; right: 3%; }
 }
 
 @media (max-width: 480px) {
@@ -572,8 +572,8 @@
     font-size: 0.8rem;
   }
 
-  .badge-1 { top: 10%; left: 5%; }
-  .badge-2 { top: 10%; right: 5%; }
-  .badge-3 { top: -8%; left: 50%; transform: translateX(-50%); }
-  .badge-4 { bottom: 10%; right: 5%; }
+  .badge-1 { top: 8%; left: 0%; }
+  .badge-2 { top: 8%; right: 0%; }
+  .badge-3 { bottom: 8%; left: 0%; }
+  .badge-4 { bottom: 8%; right: 0%; }
 }
