@@ -10,24 +10,23 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: ['https://aryangupta-ag.vercel.app', 'http://localhost:3000'],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express.json());
 
-// MongoDB Connection with extended timeout and retry logic
+// MongoDB Connection with retry logic
 const connectDB = async () => {
   try {
     console.log('🔄 Attempting to connect to MongoDB...');
-    await mongoose.connect(process.env.MONGODB_URI, {
-      serverSelectionTimeoutMS: 60000, // Increase timeout to 60 seconds
-      socketTimeoutMS: 75000, // Socket timeout
-      connectTimeoutMS: 60000, // Connection timeout
-      family: 4, // Use IPv4, skip trying IPv6
-    });
+    await mongoose.connect(process.env.MONGODB_URI);
     console.log('✅ MongoDB Connected Successfully');
   } catch (err) {
     console.error('❌ MongoDB connection error:', err.message);
     console.error('Full error:', err);
-    // Retry connection after 10 seconds
     console.log('🔄 Retrying MongoDB connection in 10 seconds...');
     setTimeout(connectDB, 10000);
   }
