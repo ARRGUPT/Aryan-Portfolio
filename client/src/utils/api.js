@@ -1,5 +1,5 @@
 // API utility for backend communication
-const API_BASE_URL = process.env.REACT_APP_API_URL || '/api';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://aryan-portfolio-d2ym.onrender.com/api';
 
 // Health check
 export const checkHealth = async () => {
